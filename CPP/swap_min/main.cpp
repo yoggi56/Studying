@@ -33,7 +33,7 @@ void delete_matrix(int ** m) {
 
 // Find in a matrix the row with the least element and then
 // swap that row with the first one
-void swap_min(int * m[], unsigned rows, unsigned cols)
+void swap_min(int * m[], size_t rows, size_t cols)
 {
     int * row = new int[cols];
     int min = m[0][0];
@@ -51,7 +51,7 @@ void swap_min(int * m[], unsigned rows, unsigned cols)
     m[0] = row;
 
     cout << "\nThe row with the least element is " << min_row << ":" << endl;
-    for (unsigned i = 0; i != cols; i++)
+    for (size_t i = 0; i != cols; i++)
         cout << row[i] << " ";
     cout << endl;
 }
