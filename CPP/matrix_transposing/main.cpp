@@ -1,3 +1,10 @@
+/*
+	Write a program that creates a matrix with size a x b
+	and then transposes it creating the new matrix. 
+	You have to create massives using only dynamic memory
+	and you can't change the origin matrix after its initializing.
+*/
+
 #include <iostream>
 
 using namespace std;
