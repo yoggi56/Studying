@@ -97,7 +97,7 @@ int main()
     int Q; // number of queries
     cin >> N >> Q;
 
-    stringstream ss = HRML_input(N);
+    stringstream ss = HRML_input(N); // break the input code into sepatae words
     map <string, string> data = HRML_parser(ss);
 
     /*
