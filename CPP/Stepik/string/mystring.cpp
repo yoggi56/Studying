@@ -86,14 +86,6 @@ void MyString::print() const {
 
 void MyString::resize(size_t nsize)
 {
-//    char * ndata = new char[nsize];
-//    size_t n = nsize > size_ ? size_ : nsize;
-//    for (size_t i = 0; i != n; ++i)
-//        ndata[i] = data_[i];
-//    delete [] data_;
-//    data_ = ndata;
-//    size_ = nsize;
-    //
     MyString t(nsize);
     size_t n = nsize > size_ ? size_ : nsize;
     for (size_t i = 0; i != n; ++i)
