@@ -1,6 +1,7 @@
 ----------------------------------------------------------------------------------
 -- Module Name: std_mux1
--- Description: Standard two-input bus multiplexer
+-- Description: Standard two-input bus multiplexer which is realized using 
+--              standard logic gates
 ----------------------------------------------------------------------------------
 
 
