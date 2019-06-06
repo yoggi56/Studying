@@ -34,9 +34,11 @@ architecture simple_dp_mem_arch of simple_dp_mem is
 
 begin
 
-	process(clk)
+	process(clk, rst)
 	begin
-		if rising_edge(clk) then
+		if (rst <= '1') then
+			data_out <= (others => 'Z');
+		elsif rising_edge(clk) then
 			if (wr_en = '1') then
 				ram(to_integer(unsigned(wr_adr))) <= data_in;
 				-- Read-during-write returns NEW data
@@ -47,5 +49,5 @@ begin
 			end if;
 		end if;
 	end process;
-	
+
 end simple_dp_mem_arch;
