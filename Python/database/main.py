@@ -1,5 +1,5 @@
 import sys  # sys нужен для передачи argv в QApplication
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtWidgets
 import mainwindow
 from shelvebase import PeopleBase
 from person import Person
