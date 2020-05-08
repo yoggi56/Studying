@@ -38,6 +38,21 @@ class MainWindow(QtWidgets.QMainWindow, mainwindow.Ui_mainwindow):
         self.show_data(self.key)
 
     def update_record(self):
+        if self.age_line.text().isalpha():
+            QtWidgets.QMessageBox.information(self, "Information", "Field 'Age' has to be a number")
+            return
+        if int(self.age_line.text()) > 100 or int(self.age_line.text()) < 0 :
+            QtWidgets.QMessageBox.information(self, "Information",
+                                              """This person doesn't seem to be a human. 
+                                              Please, change the age to a number from 0 to 100.""")
+            return
+        if self.pay_line.text().isalpha():
+            QtWidgets.QMessageBox.information(self, "Information", "Field 'Pay' has to be a number")
+            return
+        if int(self.pay_line.text()) < 0:
+            QtWidgets.QMessageBox.information(self, "Information",
+                                              "You can't pay people negative salary.")
+            return
         self.key = self.key_line.text()
         self.pers.name = self.name_line.text()
         self.pers.pay = self.pay_line.text()
