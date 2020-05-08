@@ -24,6 +24,12 @@ class PeopleBase:
     def update_record(self, key, cur_record):
         self.db[key] = cur_record
 
+    def delete_record(self, key):
+        self.db.pop(key)
+
+    def clear_base(self):
+        self.db.clear()
+
 
 # Small self test
 if __name__ == '__main__':
@@ -32,9 +38,17 @@ if __name__ == '__main__':
     tom = Manager(name='Tom Doe', age=50, pay=50000)
 
     pb = PeopleBase()
+    pb.clear_base()
     pb.update_record('bob', bob)
     pb.update_record('tom', tom)
     pb.update_record('sue', sue)
 
-    pb.fetch_record('bob')
+    print("Finding sue:")
+    pb.fetch_record('sue')
     print(pb.key, ' => ', pb.record.name, pb.record.age, pb.record.pay, pb.record.job)
+
+    print("Database after deleting sue:")
+    pb.delete_record('sue')
+    for key in pb.db:
+        pb.fetch_record(key)
+        print(key, '=>', pb.record.name)

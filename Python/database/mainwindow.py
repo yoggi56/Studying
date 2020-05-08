@@ -2,20 +2,22 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created by: PyQt5 UI code generator 5.10.1
+# Created by: PyQt5 UI code generator 5.14.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_mainwindow(object):
     def setupUi(self, mainwindow):
         mainwindow.setObjectName("mainwindow")
-        mainwindow.resize(215, 206)
+        mainwindow.resize(364, 206)
         self.centralwidget = QtWidgets.QWidget(mainwindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
-        self.gridLayout.setObjectName("gridLayout")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.centralwidget)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
@@ -66,7 +68,22 @@ class Ui_mainwindow(object):
         self.update_btn.setObjectName("update_btn")
         self.horizontalLayout_2.addWidget(self.update_btn)
         self.verticalLayout_3.addLayout(self.horizontalLayout_2)
-        self.gridLayout.addLayout(self.verticalLayout_3, 0, 0, 1, 1)
+        self.horizontalLayout_4.addLayout(self.verticalLayout_3)
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.list_widget = QtWidgets.QListWidget(self.centralwidget)
+        self.list_widget.setObjectName("list_widget")
+        self.verticalLayout_4.addWidget(self.list_widget)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.delete_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.delete_btn.setObjectName("delete_btn")
+        self.horizontalLayout_3.addWidget(self.delete_btn)
+        self.clear_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.clear_btn.setObjectName("clear_btn")
+        self.horizontalLayout_3.addWidget(self.clear_btn)
+        self.verticalLayout_4.addLayout(self.horizontalLayout_3)
+        self.horizontalLayout_4.addLayout(self.verticalLayout_4)
         mainwindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(mainwindow)
@@ -80,6 +97,7 @@ class Ui_mainwindow(object):
         self.label_3.setText(_translate("mainwindow", "Age"))
         self.label_4.setText(_translate("mainwindow", "Job"))
         self.label_5.setText(_translate("mainwindow", "Pay"))
-        self.fetch_btn.setText(_translate("mainwindow", "Fetch"))
+        self.fetch_btn.setText(_translate("mainwindow", "Find"))
         self.update_btn.setText(_translate("mainwindow", "Update"))
-
+        self.delete_btn.setText(_translate("mainwindow", "Delete"))
+        self.clear_btn.setText(_translate("mainwindow", "Clear"))
